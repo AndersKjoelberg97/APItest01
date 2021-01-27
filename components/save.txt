@@ -1,0 +1,6 @@
+ {
+                bronnListe.length >= 1 ? bronnListe.map((bronn, idx) => {
+                    return <p key={idx}> {bronn}</p>
+                })
+                : ''
+            } 

@@ -1,9 +1,12 @@
+import { useState } from 'react'
 const axios = require ('axios')
 
-const bronnAPI = () => {
+const BronnAPI = () => {
  
+    const [bronnListe, setBronnList] = useState([])
+
     const getBronndata = (e) => {
-        e.preventDefault
+        e.preventDefault()
         
         axios.get('https://data.brreg.no/enhetsregisteret/api/enheter')
             .then(res => console.log(res))
@@ -13,9 +16,12 @@ const bronnAPI = () => {
     return (
         <div className='knapper'>
             <p>hello</p>
-            <button onClick='getBronndata'>søk</button>
+
+            <button onClick={getBronndata}>søk</button>
+           
+
         </div>
     );
     
 }
-export default bronnAPI;
+export default BronnAPI;

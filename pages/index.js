@@ -1,7 +1,7 @@
 import Head from 'next/head'
 //import styles from '../styles/Home.module.css'
 import InputField from '../components/InputField'
-import bronnAPI from '../components/bronnAPI'
+import BronnAPI from '../components/BronnAPI'
 
 export default function Home() {
   return (
@@ -12,7 +12,7 @@ export default function Home() {
       Søkefelt
       <InputField />
      </p>
-     <bronnAPI />
+     <BronnAPI />
      
     </div>
 

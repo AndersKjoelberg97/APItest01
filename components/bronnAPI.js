@@ -1,24 +1,29 @@
 import { useState } from 'react'
-const axios = require ('axios')
+//const axios = require ('axios')
+import axios from 'axios'
 
 const BronnAPI = () => {
  
     const [bronnListe, setBronnList] = useState([])
 
-    const getBronndata = (e) => {
-        e.preventDefault()
+    const getBronndata = () => {
+        //e.preventDefault()
         
-        axios.get('https://data.brreg.no/enhetsregisteret/api/enheter')
-            .then(res => console.log(res))
+        axios.get('https://data.brreg.no/enhetsregisteret/api/enheter/')
+            .then(res => setBronnList(res))
             .catch(err => console.log(err))
     }
 
     return (
         <div className='knapper'>
-            <p>hello</p>
-
+            
             <button onClick={getBronndata}>søk</button>
-           
+            {
+                bronnListe.length >= 1 ? bronnListe.map((page, idx) => {
+                    return <p key={idx}>{page}</p>
+                })
+                : ''
+            }
 
         </div>
     );

@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+//import styles from '../styles/Home.module.css'
 import InputField from '../components/InputField'
 
 export default function Home() {

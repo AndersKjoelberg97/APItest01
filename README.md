@@ -1,3 +1,5 @@
+## Husk å klone git lokalt
+
 ## Hvordan starte
 
  start dev server i terminal der du har filene eller i texteditor terminal:

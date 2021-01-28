@@ -11,10 +11,9 @@ import { NextApiRequest } from 'next'
    return (
 
     <div>
-      <h1>Homepage</h1>
-      <InputField />
+      <h1>Søk i brønnøysundregisteret:</h1>
       <BronnAPI />
-      <BronnFetch />
+      
      </div>
 
 

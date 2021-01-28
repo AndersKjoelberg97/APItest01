@@ -17,10 +17,24 @@ const BronnAPI = () => {
     return (
         <div className='knapper'>
             
+            
+            <input className="inputboks"></input>
+            
             <button onClick={getBronndata}>søk</button>
             {
                 bronnListe.length >= 1 ? bronnListe.map((bronn, idx) => {
-                    return <p key={idx}> {bronn.navn}</p>
+                    return <p key={idx}> {bronn.organisasjonsnummer + "- " + 
+                        bronn.navn + "- Adresse: " +
+                        bronn.forretningsadresse.postnummer + " " +
+                        bronn.forretningsadresse.kommune + "- Er de konkurs?: " +
+                        bronn.konkurs + "- Antall ansatte: " +
+                        bronn.antallAnsatte + "- Næringskode: " + 
+                        bronn.naeringskode1.kode + "- Form: " +
+
+                        bronn.organisasjonsform + "- " +
+                        bronn.sisteInnsendteAarsregnskap
+
+                    }</p>
                 })
                 : ''
             } 

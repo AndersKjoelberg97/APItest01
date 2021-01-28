@@ -1,8 +1,11 @@
 import Head from 'next/head'
+import axios from 'axios'
 //import styles from '../styles/Home.module.css'
 import InputField from '../components/InputField'
 import BronnAPI from '../components/BronnAPI'
-import BeerAPI from '../components/BeerAPI'
+import BronnFetch from '../components/BronnFetch'
+import { NextApiRequest } from 'next'
+
 
  export default function Home() {
    return (
@@ -11,7 +14,9 @@ import BeerAPI from '../components/BeerAPI'
       <h1>Homepage</h1>
       <InputField />
       <BronnAPI />
+      <BronnFetch />
      </div>
+
 
    )
  }

@@ -1,21 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
+import axios from 'axios'
 
-export default class BronnFetch extends React.Component{
-    
-    state = {
-        loading: true
-    }
+const BronnFetch = () => {
 
-    componentDidMount(){
+    const [joke, setJoke] = useState("");
+ 
+    const getJoke = () => {
+        axios.get('https://data.brreg.no/enhetsregisteret/api/enheter/').then(
+            (response)=>{
+                console.log(response)
+                //setJoke(response.data.navn)
+        });
+      
+      }
+      
 
-    }
-    
-    render(){
-        return <div>
-            {
-                this.state.loading ? <div>loading...</div> : <div>succsess</div>
-            }
-            </div>
-    }
+    return (
+        <div >
+             <button onclick= {getJoke}>GETthebronn</button>
+             {joke}
+        </div>
+    );
     
 }
+export default BronnFetch;

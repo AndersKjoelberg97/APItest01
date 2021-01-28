@@ -6,11 +6,11 @@ const BronnAPI = () => {
  
     const [bronnListe, setBronnList] = useState([])
 
-    const getBronndata = () => {
-        //e.preventDefault()
+    const getBronndata = (e) => {
+        e.preventDefault()
         
         axios.get('https://data.brreg.no/enhetsregisteret/api/enheter/')
-            .then(res => setBronnList(res))
+            .then(res => console.log(res))
             .catch(err => console.log(err))
     }
 

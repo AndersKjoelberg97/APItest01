@@ -1,6 +1,6 @@
 import { useState } from 'react'
-//import axios from 'axios'
-const axios = require ('axios')
+import axios from 'axios'
+//const axios = require ('axios')
 
 const BeerAPI = () => {
 
@@ -13,6 +13,7 @@ const BeerAPI = () => {
 
         return(
             <div>
+                <h4>Click</h4>
                 <p>Click</p>
                 <button onClick={getBeers}>Klikk meg</button>
             </div>

@@ -41,9 +41,9 @@ const BronnAPI = () => {
                         bronn.forretningsadresse.kommune + "- Er de konkurs? " +
                         bronn.konkurs + "- Antall ansatte: " +
                         bronn.antallAnsatte + "- siste årsregnskap: " + 
-                        bronn.sisteInnsendteAarsregnskap + " " +
-                        
-                        //bronn.naeringskode1.kode + "- Form: " +
+                        //bronn.sisteInnsendteAarsregnskap + " - Næringskode: " +
+                        //Her skal det legges inn en funksjon som skriver ut disse listene
+                        bronn.naeringskode1.kode + "- Form: " +
                         bronn.organisasjonsform + "- " 
 
                     }</p>
